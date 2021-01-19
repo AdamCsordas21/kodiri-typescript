@@ -10,3 +10,5 @@ export const getSize = (name: string): number => name.length
 export const convertIntoSmallCase = (sentence: string): string => sentence.toLowerCase()
 
 export const convertIntoBigCase = (sentence: string): string => sentence.toUpperCase()
+
+export const trim = (email: string): string => email.trim()

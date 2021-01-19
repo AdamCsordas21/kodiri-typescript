@@ -5,6 +5,7 @@ import {
   getSize,
   convertIntoSmallCase,
   convertIntoBigCase,
+  trim,
 } from './.'
 
 describe('concatenate function', () => {
@@ -74,5 +75,28 @@ describe('case function', () => {
     
     expect(convertIntoBigCase(sentence)).toEqual(expected)
     expect(convertIntoBigCase(sentence2)).toEqual(expected2)
+  })
+})
+
+describe('trim function', () => {
+  [{
+    it: 'removes spaces at the beginning of the email',
+    email: ' adam@typescript.co.uk',
+    result: 'adam@typescript.co.uk',
+  }, {
+    it: 'removes spaces at the end of the email',
+    email: 'adam@typescript.co.uk ',
+    result: 'adam@typescript.co.uk',
+  }, {
+    it: 'removes spaces at the beginning and at the end of the email',
+    email: ' adam@typescript.co.uk ',
+    result: 'adam@typescript.co.uk',
+  }].forEach(scenario => {
+    it(scenario.it, () => {
+      // when
+      const trimmedEmail = trim(scenario.email)
+      // then
+      expect(trimmedEmail).toEqual(scenario.result)
+    })
   })
 })
