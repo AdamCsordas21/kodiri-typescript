@@ -1,6 +1,7 @@
 import {
   concatenate,
   concatenateTwo,
+  concatenateThree,
 } from './.'
 
 describe('concatenate function', () => {
@@ -23,5 +24,12 @@ describe('concatenate function', () => {
     const result = concatenateTwo('Hello', 'world')
     // then
     expect(result).toEqual('Hello world')
+  })
+  
+  it('concatenates three words', () => {
+    // when
+    const result = concatenateThree('Hello', 'amazing', 'world')
+    // then
+    expect(result).toEqual('Hello amazing world')
   })
 })
