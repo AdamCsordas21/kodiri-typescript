@@ -4,3 +4,5 @@ export const concatenateTwo = (firstWord: string, secondWord: string): string =>
 
 export const concatenateThree = (firstWord: string, secondWord: string, thirdWord: string): string =>
   `${firstWord} ${secondWord} ${thirdWord}`
+  
+export const getSize = (name: string): number => name.length
