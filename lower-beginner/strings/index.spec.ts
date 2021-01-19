@@ -3,6 +3,7 @@ import {
   concatenateTwo,
   concatenateThree,
   getSize,
+  convertIntoSmallCase,
 } from './.'
 
 describe('concatenate function', () => {
@@ -48,5 +49,18 @@ describe('getSize function', () => {
     const result = getSize('England')
     // then
     expect(result).toEqual(7)
+  })
+})
+
+describe('case function', () => {
+  it('converts all the characters of a word into small case', () => {
+    const sentence = 'It\'s raining in London'
+    const expected = 'it\'s raining in london'
+    
+    const sentence2 = 'LONDON is my CITY'
+    const expected2 = 'london is my city'
+    
+    expect(convertIntoSmallCase(sentence)).toEqual(expected)
+    expect(convertIntoSmallCase(sentence2)).toEqual(expected2)
   })
 })
