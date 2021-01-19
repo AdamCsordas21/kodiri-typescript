@@ -9,4 +9,10 @@ describe('concatenate function', () => {
     // then
     expect(result).toEqual('AB')
   })
+  it('concatenates two lower characters', () => {
+    // when
+    const result = concatenate('a', 'b')
+    // then
+    expect(result).toEqual('ab')
+  })
 })
