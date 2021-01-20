@@ -1,6 +1,8 @@
 import {
   add,
-  subtract,  
+  subtract,
+  multiplyTwo,
+  multiplyThree,
 } from '.'
 
 describe('add function', () => {
@@ -32,5 +34,21 @@ describe('subtract function', () => {
     const result = subtract(-3, -2)
     // then
     expect(result).toEqual(-1)
+  })
+})
+
+describe('multiply function', () => {
+  it('multiplies two numbers', () => {
+    // when
+    const result = multiplyTwo(5, 4)
+    // then
+    expect(result).toEqual(20)
+  })
+  
+  it('multiplies three numbers', () => {
+    // when
+    const result = multiplyThree(2, 3, 4)
+    // then
+    expect(result).toEqual(24)
   })
 })
