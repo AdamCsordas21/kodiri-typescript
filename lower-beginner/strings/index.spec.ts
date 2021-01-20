@@ -6,7 +6,7 @@ import {
   convertIntoSmallCase,
   convertIntoBigCase,
   trim,
-} from './.'
+} from '.'
 
 describe('concatenate function', () => {
   it('concatenates two upper characters', () => {
