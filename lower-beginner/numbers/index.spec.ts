@@ -3,6 +3,7 @@ import {
   subtract,
   multiplyTwo,
   multiplyThree,
+  divide,
 } from '.'
 
 describe('add function', () => {
@@ -50,5 +51,21 @@ describe('multiply function', () => {
     const result = multiplyThree(2, 3, 4)
     // then
     expect(result).toEqual(24)
+  })
+})
+
+describe('divide function', () => {
+  it('divides two positive numbers', () => {
+    // when
+    const result = divide(5, 4)
+    // then
+    expect(result).toEqual(1.25)
+  })
+  
+  it('divides two negative numbers', () => {
+    // when
+    const result = divide(-3, -2)
+    // then
+    expect(result).toEqual(1.5)
   })
 })

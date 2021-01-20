@@ -6,3 +6,6 @@ export const multiplyTwo = (firstNum: number, secondNum: number): number => firs
 
 export const multiplyThree = (firstNum: number, secondNum: number, thirdNum: number): number => 
   firstNum * secondNum * thirdNum
+
+export const divide = (firstNum: number, secondNum: number): number => firstNum / secondNum
+  
