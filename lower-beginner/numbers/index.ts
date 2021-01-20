@@ -8,4 +8,5 @@ export const multiplyThree = (firstNum: number, secondNum: number, thirdNum: num
   firstNum * secondNum * thirdNum
 
 export const divide = (firstNum: number, secondNum: number): number => firstNum / secondNum
-  
+
+export const remainder = (firstNum: number, secondNum: number): number => firstNum % secondNum

@@ -4,6 +4,7 @@ import {
   multiplyTwo,
   multiplyThree,
   divide,
+  remainder,
 } from '.'
 
 describe('add function', () => {
@@ -67,5 +68,21 @@ describe('divide function', () => {
     const result = divide(-3, -2)
     // then
     expect(result).toEqual(1.5)
+  })
+})
+
+describe('remainder function', () => {
+  it('gets them modulus between two positive numbers', () => {
+    // when
+    const result = remainder(5, 4)
+    // then
+    expect(result).toEqual(1)
+  })
+  
+  it('gets them modulus between two negative numbers', () => {
+    // when
+    const result = remainder(14, 3)
+    // then
+    expect(result).toEqual(2)
   })
 })
