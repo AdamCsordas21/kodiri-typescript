@@ -1,5 +1,6 @@
 import {
-  negate
+  negate,
+  amIAnAdult,
 } from '.'
 
 describe('negate function', () => {
@@ -16,5 +17,20 @@ describe('negate function', () => {
     // then
     expect(result).toEqual(true)
   })
+})
 
+describe('negate function', () => {
+  it('returns true when age is >= 18', () => {
+    // when
+    const result = amIAnAdult(19)
+    // then
+    expect(result).toEqual(true)
+  })
+  
+  it('returns false when age is < 18', () => {
+    // when
+    const result = amIAnAdult(16)
+    // then
+    expect(result).toEqual(false)
+  })
 })
