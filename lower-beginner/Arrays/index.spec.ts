@@ -1,6 +1,7 @@
 import {
   getFirstElement,
   getListSize,
+  isListLong,
 } from '.'
 
 describe('getFirstElement function', () => {
@@ -27,5 +28,21 @@ describe('getListSize function', () => {
     // then
     expect(player1Size).toEqual(3)
     expect(player2Size).toEqual(4)
+  })
+})
+
+describe('isListLong function', () => {
+  it('returns true if the list has at least 3 elements', () => {
+    // when
+    const isLong = isListLong(['guinea pig', 'cat', 'dog'])
+    // then
+    expect(isLong).toEqual(true)
+  })
+  
+  it('returns false if the list has less than 3 elements', () => {
+    // when
+    const isLong = isListLong(['lion', 'tiger'])
+    // then
+    expect(isLong).toEqual(false)
   })
 })
