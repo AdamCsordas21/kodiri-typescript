@@ -2,6 +2,7 @@ import {
   getFirstElement,
   getListSize,
   isListLong,
+  getFirstOfSecondElement,
 } from '.'
 
 describe('getFirstElement function', () => {
@@ -44,5 +45,19 @@ describe('isListLong function', () => {
     const isLong = isListLong(['lion', 'tiger'])
     // then
     expect(isLong).toEqual(false)
+  })
+})
+
+describe('getFirstOfSecond function', () => {
+  it('returns the first element of the second sub-array', () => {
+    // given
+    const cities = [['Manchester', 'London'], ['Budapest', 'Warsaw']]
+    const planes = [['Boeing 737', 'Boeing 747', 'Boeing 777'], ['Airbus 320', 'Airbus 321 Neo', 'Airbus 380']]
+    // when
+    const firstOfSecondCities = getFirstOfSecondElement(cities)
+    const firstOfSecondPlanes = getFirstOfSecondElement(planes)
+    // then
+    expect(firstOfSecondCities).toEqual('Budapest')
+    expect(firstOfSecondPlanes).toEqual('Airbus 320')
   })
 })
