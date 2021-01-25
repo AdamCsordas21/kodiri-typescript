@@ -6,4 +6,4 @@ export const isListLong = (lists: string[]): boolean => lists.length >= 3 ? true
 
 export const getFirstOfSecondElement = (list: string[][]): string => list[1][0]
 
-export const reverseList = (list: (string | number | boolean)[]): (string | number | boolean)[] => list.reverse()
+export const reverseList = (list: (string | number | boolean)[]): (boolean | number | string)[] => list.reverse()
