@@ -3,6 +3,7 @@ import {
   getTotalScore,
   isGoodScore,
   getUserDetails,
+  canIEasilyGetAJob,
 } from '.'
 
 describe('getFirstName function', () => {
@@ -66,11 +67,34 @@ describe('getUserDetails function', () => {
     // then
     expect(result).toEqual('Boris aged 55 currently is in London.')
   })
-  
+
   it('return details for Donald', () => {
     // when
     const result = getUserDetails({ name: 'Donald', age: 65, location: 'Washington' })
     // then
     expect(result).toEqual('Donald aged 65 currently is in Washington.')
+  })
+})
+
+describe('canIEasilyGetAJob function', () => {
+  it('returns true if user has >= 1 years of experience', () => {
+    // when
+    const result = canIEasilyGetAJob({ yearsOfExperience: 1, rightAttitude: true })
+    // then
+    expect(result).toEqual(true)
+  })
+  
+  it('returns true if the user has no experience but right attitude', () => {
+    // when
+    const result = canIEasilyGetAJob({ yearsOfExperience: 0, rightAttitude: true })
+    // then
+    expect(result).toEqual(true)
+  })
+  
+  it('returns false if user has no experience and bad attitude', () => {
+    // when
+    const result = canIEasilyGetAJob({ yearsOfExperience: 0, rightAttitude: false })
+    // then
+    expect(result).toEqual(false)
   })
 })
