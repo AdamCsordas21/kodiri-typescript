@@ -5,3 +5,6 @@ export const getTotalScore = (player: { score1: number, score2: string }): numbe
 
 export const isGoodScore = (player: { name: string, age: number, score: number }): boolean => 
   player.score >= 50 ? true : false
+
+export const getUserDetails = (user: { name: string, age: number, location: string }): string => 
+  `${user.name} aged ${user.age} currently is in ${user.location}.`
