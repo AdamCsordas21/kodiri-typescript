@@ -1,6 +1,7 @@
 import {
   getFirstName,
   getTotalScore,
+  isGoodScore,
 } from '.'
 
 describe('getFirstName function', () => {
@@ -38,5 +39,21 @@ describe('getTotalScore function', () => {
       // then
       expect(result).toEqual(scenario.expected)
     })
+  })
+})
+
+describe('isLargeObject function', () => {
+  it('returns false if the score is < 50', () => {
+    // when
+    const result = isGoodScore({ name: 'Boris', age: 55, score: 47 })
+    // then
+    expect(result).toEqual(false)
+  })
+
+  it('returns true if the score is >= 50', () => {
+    // when
+    const result = isGoodScore({ name: 'Donald', age: 65, score: 54 })
+    // then
+    expect(result).toEqual(true)
   })
 })
