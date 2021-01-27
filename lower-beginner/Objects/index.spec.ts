@@ -17,9 +17,7 @@ describe('getFirstName function', () => {
     expected: 'Marcus'
   }].forEach(scenario => {
     it(scenario.it, () => {
-      // when
       const result = getFirstName(scenario.player)
-      // then
       expect(result).toEqual(scenario.expected)
     })
   })
@@ -36,9 +34,7 @@ describe('getTotalScore function', () => {
     expected: 98
   }].forEach(scenario => {
     it(scenario.it, () => {
-      // when
       const result = getTotalScore(scenario.player)
-      // then
       expect(result).toEqual(scenario.expected)
     })
   })
@@ -46,55 +42,41 @@ describe('getTotalScore function', () => {
 
 describe('isLargeObject function', () => {
   it('returns false if the score is < 50', () => {
-    // when
     const result = isGoodScore({ name: 'Boris', age: 55, score: 47 })
-    // then
     expect(result).toEqual(false)
   })
 
   it('returns true if the score is >= 50', () => {
-    // when
     const result = isGoodScore({ name: 'Donald', age: 65, score: 54 })
-    // then
     expect(result).toEqual(true)
   })
 })
 
 describe('getUserDetails function', () => {
   it('returns the details for Boris', () => {
-    // when
     const result = getUserDetails({ name: 'Boris', age: 55, location: 'London' })
-    // then
     expect(result).toEqual('Boris aged 55 currently is in London.')
   })
 
   it('return details for Donald', () => {
-    // when
     const result = getUserDetails({ name: 'Donald', age: 65, location: 'Washington' })
-    // then
     expect(result).toEqual('Donald aged 65 currently is in Washington.')
   })
 })
 
 describe('canIEasilyGetAJob function', () => {
   it('returns true if user has >= 1 years of experience', () => {
-    // when
     const result = canIEasilyGetAJob({ yearsOfExperience: 1, rightAttitude: true })
-    // then
     expect(result).toEqual(true)
   })
   
   it('returns true if the user has no experience but right attitude', () => {
-    // when
     const result = canIEasilyGetAJob({ yearsOfExperience: 0, rightAttitude: true })
-    // then
     expect(result).toEqual(true)
   })
   
   it('returns false if user has no experience and bad attitude', () => {
-    // when
     const result = canIEasilyGetAJob({ yearsOfExperience: 0, rightAttitude: false })
-    // then
     expect(result).toEqual(false)
   })
 })
