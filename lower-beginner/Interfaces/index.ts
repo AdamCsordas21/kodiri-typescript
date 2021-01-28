@@ -3,6 +3,4 @@ interface Politician {
   lastName: string
 }
 
-export const getFirstName = (person: Politician): string => {
-  return person.firstName
-}
+export const getFirstName = (person: Politician): string => person.firstName
