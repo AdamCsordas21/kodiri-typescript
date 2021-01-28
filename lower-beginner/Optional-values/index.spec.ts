@@ -1,6 +1,7 @@
 import {
   checkEmail,
   findFirstPositiveNum,
+  sum,
 } from '.'
 
 describe('checkEmail', () => {
@@ -20,5 +21,16 @@ describe('findFirstPositiveNumber', () => {
     expect(positiveNum1).toEqual(1)
     expect(positiveNum2).toEqual(1)
     expect(positiveNum3).toEqual('No positive number available.')
+  })
+})
+
+describe('sum', () => {
+  it('it adds two or three numbers', () => {
+    // when
+    const result1 = sum(1, 2)
+    const result2 = sum(-1, 2, -3)
+    // then
+    expect(result1).toEqual(3)
+    expect(result2).toEqual(-2)
   })
 })
