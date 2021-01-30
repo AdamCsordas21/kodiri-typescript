@@ -24,3 +24,17 @@ interface footballPlayer {
 }
 
 export const getPersonalDetails = (player: footballPlayer): {} => player.personal
+
+interface Query {
+  director: string,
+  year: number
+}
+
+interface Movie {
+  title: string,
+  score: number
+}
+
+export const getMovie = (query: Query): Movie => {
+  return { title: 'Terminator', score: 87.3 }
+}
