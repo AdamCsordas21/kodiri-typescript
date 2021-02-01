@@ -33,5 +33,10 @@ describe('Player class', () => {
       const userName = player.getUserName()
       expect(userName).toEqual('Boris')
     })
+    it('returns a Donald when passed to the construtor', () => {
+      const player = new Player('Donald')
+      const userName = player.getUserName()
+      expect(userName).toEqual('Donald')
+    })
   })
 })
