@@ -16,6 +16,18 @@ export class Player {
     this.name = name 
   }
   getUserName(): string {
-    return this.name
+    return `${this.name}`
+  }
+}
+
+export class Player2 {
+  private firstName: string;
+  private lastName: string
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName
+    this.lastName = lastName
+  }
+  getUserName(): string {
+    return `${this.firstName} ${this.lastName}`
   }
 }
