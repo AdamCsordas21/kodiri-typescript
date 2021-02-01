@@ -31,3 +31,15 @@ export class Player2 {
     return `${this.firstName} ${this.lastName}`
   }
 }
+
+export class Country {
+  private country: string;
+  private population: number
+  constructor(country: string, population: number) {
+    this.country = country
+    this.population = population
+  }
+  getCountryPopulation(): string {
+    return `${this.population} million people live in ${this.country}`
+  }
+}
