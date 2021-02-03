@@ -1,5 +1,6 @@
 import {
   concatenate,
+  concatenateTwo,
 } from '.'
 
 describe('concatenate function', () => {
@@ -8,8 +9,14 @@ describe('concatenate function', () => {
     expect(result).toEqual('AB')
   })
 
-  it('concatenates to lower characters', () => {
+  it('concatenates two lower characters', () => {
     const result = concatenate('a', 'b')
     expect(result).toEqual('ab')
   })
+
+  it('concatenates two words', () => {
+    const result = concatenateTwo('Hello', 'World')
+    expect(result).toEqual('Hello World')
+  })
 })
+
