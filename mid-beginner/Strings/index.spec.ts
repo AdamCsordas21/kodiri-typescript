@@ -2,6 +2,7 @@ import {
   concatenate,
   concatenateTwo,
   concatenateThree,
+  getSize,
 } from '.'
 
 describe('concatenate function', () => {
@@ -23,5 +24,17 @@ describe('concatenate function', () => {
   it('concatenates three words', () => {
     const result = concatenateThree('Hello', 'amazing', 'World')
     expect(result).toEqual('Hello amazing World')
+  })
+})
+
+describe('get size function', () => {
+  it('returns 5 for "Boris"', () => {
+    const result = getSize('Boris')
+    expect(result).toEqual(5)
+  })
+  
+  it('returns 6 for "Donald', () => {
+    const result = getSize('Donald')
+    expect(result).toEqual(6)
   })
 })
