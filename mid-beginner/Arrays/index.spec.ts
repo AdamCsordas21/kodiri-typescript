@@ -3,6 +3,7 @@ import {
   getListSize,
   isListLong,
   getFirstOfSecondElement,
+  reverseList,
 } from '.'
 
 describe('getFirstElement function', () => {
@@ -46,5 +47,17 @@ describe('getFirstOfSecond function', () => {
     const firstOfSecondPlanes = getFirstOfSecondElement(planes)
     expect(firstOfSecondCities).toEqual('Budapest')
     expect(firstOfSecondPlanes).toEqual('Airbus 320')
+  })
+})
+
+describe('reverseList function', () => {
+  it('reverses the user details for Boris', () => {
+    const reversedList = reverseList(['Boris', 55, false])
+    expect(reversedList).toEqual([false, 55, 'Boris'])
+  })
+  
+  it('reverses the user details for Donald', () => {
+    const reversedList = reverseList(['Donald', 65, false])
+    expect(reversedList).toEqual([false, 65, 'Donald'])
   })
 })
