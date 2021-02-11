@@ -7,7 +7,7 @@ import {
 } from '.'
 
 describe('checkEmail', () => {
-  it('determines whether a player has an emaail address or not', () => {
+  it('determines whether a player has an email address or not', () => {
     const resultWithEmail = checkEmail('Boris', 'boris@england.co.uk')
     const resultWithoutEmail = checkEmail('Boris')
     expect(resultWithEmail).toEqual('Email provided')
