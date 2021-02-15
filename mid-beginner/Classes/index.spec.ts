@@ -1,6 +1,7 @@
 import {
   Greeter,
   Greeter2,
+  Player,
 } from '.'
 
 describe('Greeter class', () => {
@@ -21,6 +22,16 @@ describe('Greeter class', () => {
       const helloDonaldMessage = greeter.greet('Donald')
       expect(helloBorisMessage).toEqual('Hello Boris')
       expect(helloDonaldMessage).toEqual('Hello Donald')
+    })
+  })
+})
+
+describe('Player class', () => {
+  describe('getUserName method', () => {
+    it('returns a Boris when passed to the constructor', () => {
+      const player = new Player('Boris')
+      const userName = player.getUserName()
+      expect(userName).toEqual('Boris')
     })
   })
 })
