@@ -2,6 +2,7 @@ import {
   checkEmail,
   findFirstPositiveNum,
   sum,
+  isNumericList,
 } from '.'
 
 describe('checkMail', () => {
@@ -30,5 +31,14 @@ describe('sum', () => {
     const result2 = sum(-1, 2, -3)
     expect(result1).toEqual(3)
     expect(result2).toEqual(-2)
+  })
+})
+
+describe('isNumericList', () => {
+  it('checks if all the elements of the list are numbers', () => {
+    const result1 = isNumericList([1, 4, 3])
+    const result2 = isNumericList([1, '4', 3])
+    expect(result1).toEqual(true)
+    expect(result2).toEqual(false)
   })
 })

@@ -4,4 +4,5 @@ export const findFirstPositiveNum = (nums: number[]): number | string =>
   nums.find(n => n > 0) || `No positive number available`
 
 export const sum = (a: number, b: number, c?: number): number => c ? a + b + c : a + b
-  
+
+export const isNumericList = (list: Array<number | string>): boolean => list.every(n => typeof n === 'number')
