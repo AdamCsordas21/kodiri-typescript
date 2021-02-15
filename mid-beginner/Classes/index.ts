@@ -3,3 +3,9 @@ export class Greeter {
     return `Hello World`
   }
 }
+
+export class Greeter2 {
+  greet(user: string): string {
+    return `Hello ${user}`
+  }
+}
