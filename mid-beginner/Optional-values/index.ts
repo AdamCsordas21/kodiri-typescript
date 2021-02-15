@@ -6,3 +6,10 @@ export const findFirstPositiveNum = (nums: number[]): number | string =>
 export const sum = (a: number, b: number, c?: number): number => c ? a + b + c : a + b
 
 export const isNumericList = (list: Array<number | string>): boolean => list.every(n => typeof n === 'number')
+
+interface IDrivers {
+  name: string
+  titles?: number[]
+}
+
+export const getDriverTitles = (drivers: IDrivers): number[] | string => drivers.titles || `No titles yet`
