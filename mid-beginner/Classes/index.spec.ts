@@ -3,6 +3,7 @@ import {
   Greeter2,
   Player,
   Player2,
+  Country,
 } from '.'
 
 describe('Greeter class', () => {
@@ -51,6 +52,16 @@ describe('Player class', () => {
       const player = new Player2('Donald', 'Trump')
       const userName = player.getUserName()
       expect(userName).toEqual('Donald Trump')
+    })
+  })
+})
+
+describe('Player class', () => {
+  describe('getCountryPopulation method', () => {
+    it('returns a message with the population of Italy', () => {
+      const country = new Country('Italy', 60.59)
+      const populationMsg = country.getCountryPopulation()
+      expect(populationMsg).toEqual('60.59 million people live in Italy')
     })
   })
 })
