@@ -37,3 +37,12 @@ interface Movie {
 export const getMovie = (query: Query): Movie => {
   return { title: 'Terminator', score: 87.3 }
 }
+
+interface Movie2 {
+  title: string
+  year: number
+  isGood: boolean
+}
+
+export const getMovie2 = (query: string): Movie2 => 
+  query ? { title: 'Terminator', year: 1991, isGood: true } : undefined

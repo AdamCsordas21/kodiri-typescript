@@ -3,6 +3,7 @@ import {
   getFirstName2,
   getPersonalDetails,
   getMovie,
+  getMovie2,
 } from '.'
 
 describe('getFirstName function', () => {
@@ -47,5 +48,12 @@ describe('getMovie function', () => {
     const query = { director: 'James Cameron', year: 1984 }
     const movie = getMovie(query)
     expect(movie).toEqual({ title: 'Terminator', score: 87.3 })
+  })
+})
+
+describe('getMovie2 function', () => {
+  it('returns Terminator when searching James Cameron + 1991', () => {
+    const movie = getMovie2('James Cameron')
+    expect(movie).toEqual({ title: 'Terminator', year: 1991, isGood: true })
   })
 })
