@@ -36,7 +36,7 @@ describe('getPersonalDetails function', () => {
     expect(personalDetails).toEqual({ name: 'Paul Pogba', age: 27 })
   })
   
-  it('returns the personal details of a Mnachester United player', () => {
+  it('returns the personal details of a Manchester United player', () => {
     const personalDetails = getPersonalDetails({ personal: { name: 'Marcus Rashford', age: 23 }, position: 'forward' })
     expect(personalDetails).toEqual({ name: 'Marcus Rashford', age: 23 })
   })

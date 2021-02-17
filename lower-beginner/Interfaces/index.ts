@@ -15,7 +15,7 @@ interface Politician2 {
 
 export const getFirstName2 = (person: Politician2): string => person.name.first
 
-interface footballPlayer {
+interface FootballPlayer {
   personal: {
     name: string,
     age: number
@@ -23,7 +23,7 @@ interface footballPlayer {
   position: string
 }
 
-export const getPersonalDetails = (player: footballPlayer): {} => player.personal
+export const getPersonalDetails = (player: FootballPlayer): {} => player.personal
 
 interface Query {
   director: string,
