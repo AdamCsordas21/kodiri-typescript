@@ -2,6 +2,7 @@ import {
   getFirstName,
   getFirstName2,
   getPersonalDetails,
+  getMovie,
 } from '.'
 
 describe('getFirstName function', () => {
@@ -38,5 +39,13 @@ describe('getPersonalDetails function', () => {
   it('returns the personal details of a Manchester United player', () => {
     const personalDetails = getPersonalDetails({ personal: { name: 'Marcus rashford', age: 23 }, position: 'forward' })
     expect(personalDetails).toEqual({ name: 'Marcus rashford', age: 23 })
+  })
+})
+
+describe('getMovie function', () => {
+  it('returns Terminator when searching james Cameron + 1984', () => {
+    const query = { director: 'James Cameron', year: 1984 }
+    const movie = getMovie(query)
+    expect(movie).toEqual({ title: 'Terminator', score: 87.3 })
   })
 })
