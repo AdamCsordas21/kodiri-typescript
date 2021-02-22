@@ -2,6 +2,7 @@ import {
   concatenate,
   concatenateTwo,
   concatenateThree,
+  getSize,
 } from '.'
 
 describe('concatenate function', () => {
@@ -23,5 +24,17 @@ describe('concatenate function', () => {
   it('concatenates three words', () => {
     const result = concatenateThree('Glory', 'Glory', 'ManUnited')
     expect(result).toEqual('Glory Glory ManUnited')
+  })
+})
+
+describe('getSize function', () => {
+  it('returns 6 for "London"', () => {
+    const result = getSize('London')
+    expect(result).toEqual(6)
+  })
+  
+  it('returns 7 for "England"', () => {
+    const result = getSize('England')
+    expect(result).toEqual(7)
   })
 })
