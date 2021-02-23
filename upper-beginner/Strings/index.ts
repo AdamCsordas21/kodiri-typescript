@@ -6,3 +6,5 @@ export const concatenateThree = (wordOne: string, wordTwo: string, wordThree: st
   `${wordOne} ${wordTwo} ${wordThree}`
   
 export const getSize = (input: string): number => input.length
+
+export const convertIntoSmallCase = (sentence: string): string => sentence.toLowerCase()
