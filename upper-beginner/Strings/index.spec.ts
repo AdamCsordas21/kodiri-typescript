@@ -4,6 +4,7 @@ import {
   concatenateThree,
   getSize,
   convertIntoSmallCase,
+  convertIntoBigCase,
 } from '.'
 
 describe('concatenate function', () => {
@@ -48,5 +49,14 @@ describe('case function', () => {
     const expected2 = 'red devils'
     expect(convertIntoSmallCase(sentence)).toEqual(expected)
     expect(convertIntoSmallCase(sentence2)).toEqual(expected2)
+  })
+  
+  it('converts all the characters of a word into big case', () => {
+    const sentence = 'Glory, glory MANUNITED'
+    const expected = 'GLORY, GLORY MANUNITED'
+    const sentence2 = 'GLORY, GLORY manunited'
+    const expected2 = 'GLORY, GLORY MANUNITED'
+    expect(convertIntoBigCase(sentence)).toEqual(expected)
+    expect(convertIntoBigCase(sentence2)).toEqual(expected2)
   })
 })
