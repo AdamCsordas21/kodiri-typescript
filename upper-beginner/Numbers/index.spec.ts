@@ -20,4 +20,9 @@ describe('substract function', () => {
     const result = subtract(8, 3)
     expect(result).toEqual(5)
   })
+  
+  it('subtracts two negative numbers', () => {
+    const result = subtract(-33, -17)
+    expect(result).toEqual(-16)
+  })
 })
