@@ -47,4 +47,9 @@ describe('divide function', () => {
     const result = divide(7, 4)
     expect(result).toEqual(1.75)
   })
+  
+  it('divides two negative numbers', () => {
+    const result = divide(-8, - 5)
+    expect(result).toEqual(1.6)
+  })
 })
