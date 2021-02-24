@@ -2,6 +2,7 @@ import {
   add,
   subtract,
   multiplyTwo,
+  multiplyThree,
 } from '.'
 
 describe('add function', () => {
@@ -32,5 +33,10 @@ describe('multiply function', () => {
   it('multiplies two numbers', () => {
     const result = multiplyTwo(7, 9)
     expect(result).toEqual(63)
+  })
+  
+  it('multiplies three numbers', () => {
+    const result = multiplyThree(3, 6, 9)
+    expect(result).toEqual(162)
   })
 })
