@@ -56,8 +56,13 @@ describe('divide function', () => {
 })
 
 describe('remainder function', () => {
-  it('gets them modulos between two positive numbers', () => {
+  it('gets them modulus between two positive numbers', () => {
     const result = remainder(7, 5)
     expect(result).toEqual(2)
+  })
+  
+  it('gets them modulus between two negative numbers', () => {
+    const result = remainder(-7, -3)
+    expect(result).toEqual(-1)
   })
 })
