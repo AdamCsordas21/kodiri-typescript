@@ -55,4 +55,9 @@ describe('reverseList function', () => {
     const reversedList = reverseList(['Boris', 55, false])
     expect(reversedList).toEqual([false, 55, 'Boris'])
   })
+  
+  it('reverses the user detials for Donald', () => {
+    const reversedList = reverseList(['Donald', 65, true])
+    expect(reversedList).toEqual([true, 65, 'Donald'])
+  })
 })
