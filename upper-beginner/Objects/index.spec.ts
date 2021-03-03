@@ -56,4 +56,9 @@ describe('getUserDetails function', () => {
     const result = getUserDetails({ name: 'Boris', age: 55, location: 'London' })
     expect(result).toEqual('Boris aged 55 currently is in London.')
   })
+  
+  it('returns the details for Donald', () => {
+    const result = getUserDetails({ name: 'Donald', age: 65, location: 'Washington' })
+    expect(result).toEqual('Donald aged 65 currently is in Washington.')
+  })
 })
