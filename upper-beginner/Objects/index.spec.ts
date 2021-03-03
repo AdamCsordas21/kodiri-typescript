@@ -2,6 +2,7 @@ import {
   getFirstName,
   getTotalScore,
   isGoodScore,
+  getUserDetails,
 } from '.'
 
 describe('getFirstName function', () => {
@@ -47,5 +48,12 @@ describe('isLargeObject function', () => {
   it('returns true if the score is >= 50', () => {
     const result = isGoodScore({ name: 'Donald', age: 65, score: 54 })
     expect(result).toEqual(true)
+  })
+})
+
+describe('getUserDetails function', () => {
+  it('returns the details for Boris', () => {
+    const result = getUserDetails({ name: 'Boris', age: 55, location: 'London' })
+    expect(result).toEqual('Boris aged 55 currently is in London.')
   })
 })
