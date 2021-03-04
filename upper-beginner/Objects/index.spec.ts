@@ -74,4 +74,9 @@ describe('canIEasilyGetAJob function', () => {
     const result = canIEasilyGetAJob({ yearsOfExperience: 0, rightAttitude: true })
     expect(result).toEqual(true)
   })
+  
+  it('returns false if user has no experience and bad attitude', () => {
+    const result = canIEasilyGetAJob({ yearsOfExperience: 0, rightAttitude: false })
+    expect(result).toEqual(false)
+  })
 })
