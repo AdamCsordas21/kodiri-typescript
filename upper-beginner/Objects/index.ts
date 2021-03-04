@@ -9,3 +9,9 @@ export const isGoodScore = (player: { name: string, age: number, score: number }
 export const getUserDetails = (user: { name: string, age: number, location: string }): string =>
   `${user.name} aged ${user.age} currently is in ${user.location}.`
   
+export const canIEasilyGetAJob = (user: { yearsOfExperience: number, rightAttitude: boolean }): boolean => {
+  if (user.yearsOfExperience >= 1) {
+    return true
+  }
+}  
+ 
