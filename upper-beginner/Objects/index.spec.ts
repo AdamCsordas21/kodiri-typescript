@@ -65,8 +65,13 @@ describe('getUserDetails function', () => {
 })
 
 describe('canIEasilyGetAJob function', () => {
-  it('returns true if uuser has >=1 1 years of experience', () => {
+  it('returns true if uuser has >= 1 years of experience', () => {
     const result = canIEasilyGetAJob({ yearsOfExperience: 1, rightAttitude: true })
+    expect(result).toEqual(true)
+  })
+  
+  it('returns true if the user has no experience but right attitude', () => {
+    const result = canIEasilyGetAJob({ yearsOfExperience: 0, rightAttitude: true })
     expect(result).toEqual(true)
   })
 })
