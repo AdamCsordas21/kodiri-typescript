@@ -1,3 +1,1 @@
-export const negate = (value: boolean): boolean => {
-  return value !== true ? true : false
-}
+export const negate = (value: boolean): boolean => !value
