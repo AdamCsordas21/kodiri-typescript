@@ -1,6 +1,7 @@
 import {
   negate,
   amIAnAdult,
+  flagChecker,
 } from '.'
 
 describe('negate function', () => {
@@ -24,5 +25,17 @@ describe('negate function', () => {
   it('returns false when age is < 18', () => {
     const result = amIAnAdult(16)
     expect(result).toEqual(false)
+  })
+})
+
+describe('flagChecker function', () => {
+  it('returns a message when a given argument is set to true', () => {
+    const result = flagChecker(true)
+    expect(result).toEqual('Flag set to true')
+  })
+  
+  it('returns a message when a given arguments is set to false', () => {
+    const result = flagChecker(false)
+    expect(result).toEqual('Flag set to false')
   })
 })
