@@ -3,6 +3,7 @@ import {
   amIAnAdult,
   flagChecker,
   hasVictoryChances,
+  amIAwake,
 } from '.'
 
 describe('negate function', () => {
@@ -59,5 +60,32 @@ describe('hasVictoryChances function', () => {
       const result = hasVictoryChances(isGoodRider, hasGoodBike)
       expect(result).toEqual(expected)
     })
+  })
+})
+
+describe('amIAwake function', () => {
+  [{
+    title: (
+      'returns false if you slept less than 8 hours and you had less than two cups of coffee'
+    ),
+    sleepHours: 7, coffeeCups: 1, awake: false
+  }, {
+    title: (
+      'returns true if you slept at least 8 hours even if you had less then two cups of coffee'
+    ),
+    sleepHours: 8, coffeeCups: 1, awake: true
+  }, {
+    title: (
+      'returns true if you slept less than 8 hours but you had at least 2 cups of coffee'
+    ),
+    sleepHours: 7, coffeeCups: 2, awake: true
+  }, {
+    title: (
+      'returns true if you slept at least 8 hours and you had at least 2 cups of coffee'
+    ),
+    sleepHours: 8, coffeeCups: 2, awake: true
+  }].forEach(({ sleepHours, coffeeCups, awake }) => {
+    const result = amIAwake(sleepHours, coffeeCups)
+    expect(result).toEqual(awake)
   })
 })
