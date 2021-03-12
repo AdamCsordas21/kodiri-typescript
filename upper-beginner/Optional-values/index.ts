@@ -1,7 +1,1 @@
-export const checkEmail = (name: string, email?: string): string => {
-  if (email) {
-    return `Email provided`
-  } else {
-    return `Email not provided`
-  }
-}
+export const checkEmail = (name: string, email?: string): string => email ? `Email provided` : `Email not provided`
