@@ -13,6 +13,4 @@ interface IDrivers {
   titles?: number[]
 }
 
-export const getDriverTitles = (drivers: IDrivers ): number[] | string => {
-  return drivers.titles || `No titles yet`
-}
+export const getDriverTitles = (drivers: IDrivers ): number[] | string => drivers.titles || `No titles yet`
