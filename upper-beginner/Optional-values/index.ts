@@ -6,6 +6,4 @@ export const findFirstPositiveNum = (list: number[]): number | string =>
 
 export const sum = (a: number, b: number, c?: number) => a + b
 
-export const isNumericList = (list: Array<number | string>): boolean => {
-  return list.every(n => typeof n === "number")
-}
+export const isNumericList = (list: Array<number | string>): boolean => list.every(n => typeof n === "number")
