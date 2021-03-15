@@ -3,6 +3,7 @@ import {
   findFirstPositiveNum,
   sum,
   isNumericList,
+  getDriverTitles,
 } from '.'
 
 describe('checkMail', () => {
@@ -40,5 +41,19 @@ describe('isNumericList', () => {
     const result2 = isNumericList([1, '4', 3])
     expect(result).toEqual(true)
     expect(result2).toEqual(false)
+  })
+})
+
+describe('getDriverTitles', () => {
+  it('returns the driver world titles, if any', () => {
+    const driver1 = { name: 'Fernando Alonso', titles: [2005, 2006] }
+    const driver2 = { name: 'Mika Salo' }
+    const driver3 = { name: 'James Hunt', titles: [1976] }
+    const driver1Titles = getDriverTitles(driver1)
+    const driver2Titles = getDriverTitles(driver2)
+    const driver3Titles = getDriverTitles(driver3)
+    expect(driver1Titles).toEqual([2005, 2006])
+    expect(driver2Titles).toEqual('No titles yet')
+    expect(driver3Titles).toEqual([1976])
   })
 })
