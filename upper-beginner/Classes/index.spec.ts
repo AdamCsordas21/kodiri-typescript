@@ -40,10 +40,17 @@ describe('Player class', () => {
 describe('Player class', () => {
   describe('getUserName method', () => {
     it(`returns a \'Boris Johnson\' when these details are passed
-      to the construstoras a individual arguments`, () => {
+      to the construstoras as individual arguments`, () => {
       const player = new Player2('Boris', 'Johnson')
       const userName = player.getUserName()
       expect(userName).toEqual('Boris Johnson')
+    })
+
+    it(`returns a \'Donald Trump\' when these details are passed
+      to the constructor as individual arguments`, () => {
+      const player = new Player2('Donald', 'Trump')
+      const userName = player.getUserName()
+      expect(userName).toEqual('Donald Trump')
     })
   })
 })
