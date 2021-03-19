@@ -63,5 +63,11 @@ describe('Player class', () => {
       const populationMsg = country.getCountryPopulation()
       expect(populationMsg).toEqual('60.59 million people live in Italy')
     })
+    
+    it('returns a message with hte population of Brazil', () => {
+      const country = new Country('Brazil', 209.4)
+      const populationMsg = country.getCountryPopulation()
+      expect(populationMsg).toEqual('209.4 million people live in Brazil')
+    })
   })
 })
