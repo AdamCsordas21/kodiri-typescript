@@ -13,6 +13,4 @@ interface Politician2 {
   age: number
 }
 
-export const getFirstName2 = (person: Politician2) => {
-  return person.name.firstName
-}
+export const getFirstName2 = (person: Politician2) => person.name.firstName
