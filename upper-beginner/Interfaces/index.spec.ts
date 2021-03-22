@@ -20,4 +20,9 @@ describe('getFirstName2 function', () => {
     const firstName = getFirstName2({ name: { firstName: 'Boris', lastName: 'Johnson' }, age: 55 })
     expect(firstName).toEqual('Boris')
   })
+  
+  it('returns Donald when last name Trump is provided', () => {
+    const firstName = getFirstName2({ name: { firstName: 'Donald', lastName: 'Trump' }, age: 65 })
+    expect(firstName).toEqual('Donald')
+  })
 })
