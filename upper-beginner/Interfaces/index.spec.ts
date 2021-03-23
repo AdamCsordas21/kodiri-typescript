@@ -1,7 +1,7 @@
 import {
   getFirstName,
   getFirstName2,
-  getPersonalDetials,
+  getPersonalDetails,
 } from '.'
 
 describe('getFirstName function', () => {
@@ -30,7 +30,12 @@ describe('getFirstName2 function', () => {
 
 describe('getPersonalDetails', () => {
   it('returns the personal details of a Manchester United player', () => {
-    const personalDetails = getPersonalDetials({ personal: { name: 'Paul Pogba', age: 27 }, position: 'midfielder' })
+    const personalDetails = getPersonalDetails({ personal: { name: 'Paul Pogba', age: 27 }, position: 'midfielder' })
     expect(personalDetails).toEqual({ name: 'Paul Pogba', age: 27 })
+  })
+  
+  it('returns the personal details of a Manchester United player', () => {
+    const personalDetails = getPersonalDetails({ personal: { name: 'Marcus Rashford', age: 23 }, position: 'striker' })
+    expect(personalDetails).toEqual({ name: 'Marcus Rashford', age: 23 })
   })
 })

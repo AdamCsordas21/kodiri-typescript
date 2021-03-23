@@ -23,4 +23,4 @@ interface FootballPlayer {
   position: string
 }
 
-export const getPersonalDetials = (player: FootballPlayer): {} => player.personal
+export const getPersonalDetails = (player: FootballPlayer): {} => player.personal
