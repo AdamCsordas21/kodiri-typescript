@@ -45,6 +45,5 @@ interface Movie2 {
   isGood: boolean
 }
 
-export const getMovie2 = (query: string): Movie2 => {
-  return query ? { title: 'Terminator', year: 1991, isGood: true } : undefined
-}
+export const getMovie2 = (query: string): Movie2 =>
+  query ? { title: 'Terminator', year: 1991, isGood: true } : undefined
